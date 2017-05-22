@@ -1,0 +1,20 @@
+<!doctype html>
+
+<head>
+    <title>discogs-modipy</title>
+</head>
+
+<body>
+    <ul>
+        {% for release in releases %}
+            <li>
+                {% set title = release.basic_information.title %}
+                {% set artist = release.basic_information.artists[0].name %}
+
+                <a href="/play/{{title}}/{{artist}}">
+                    {{ title }} - {{ artist }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>

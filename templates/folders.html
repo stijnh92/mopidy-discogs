@@ -1,0 +1,11 @@
+<!doctype html>
+
+<head>
+    <title>discogs-modipy</title>
+</head>
+
+<body>
+    {% for folder_id, details in folders.items() %}
+        <li><a href="/folder/{{ folder_id }}">{{ details.info.name }}</a></li>
+    {% endfor %}
+</body>
