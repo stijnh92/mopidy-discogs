@@ -23,7 +23,7 @@ class Mopidy(object):
         result = self.post(method, data).json()['result'][0]
 
         if 'albums' in result:
-            return result['albums'][0]
+            return result['albums'][0]['uri']
         raise Exception('{} by {} not found on Mopidy!'.format(title, artist))
 
     def clear_tracklist(self):

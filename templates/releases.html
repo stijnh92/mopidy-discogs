@@ -11,7 +11,7 @@
                 {% set title = release.basic_information.title %}
                 {% set artist = release.basic_information.artists[0].name %}
 
-                <a href="/play/{{title}}/{{artist}}">
+                <a href="/play/{{title}}/{{artist}}/{{release.id}}">
                     {{ title }} - {{ artist }}
                 </a>
             </li>
